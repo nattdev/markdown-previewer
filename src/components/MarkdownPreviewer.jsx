@@ -1,19 +1,24 @@
 import { useState } from "react";
 import Editor from "./Editor"
 import Previewer from "./Previewer"
+import { marked } from "marked";
 
 function MarkdownPreviewer() {
 
 const [text, setText] = useState('');
 
 const handleChange = (event) => {
-    setText(event.target.value);
+    const newText = event.target.value;
+    setText(newText);
+    setMarkedText(marked.parse(newText));
 };
+
+const [markedText, setMarkedText] = useState('');
 
     return (
         <>
             <Editor onChange={handleChange}/>
-            <Previewer text={text}/>
+            <Previewer text={markedText}/>
         </>
     )
 }

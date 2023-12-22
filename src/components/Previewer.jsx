@@ -8,7 +8,7 @@ function Previewer({text}) {
                 <button aria-label="Close"></button>
             </div>
         </div>
-        <div id="preview">{text}</div>
+        <div id="preview" dangerouslySetInnerHTML={{ __html: text }}></div>
     </div>
     )
 }
