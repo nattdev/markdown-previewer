@@ -5,20 +5,25 @@ import { marked } from "marked";
 
 function MarkdownPreviewer() {
 
-const [text, setText] = useState('');
+    const [text, setText] = useState('');
 
-const handleChange = (event) => {
-    const newText = event.target.value;
-    setText(newText);
-    setMarkedText(marked.parse(newText));
-};
+    const handleChange = (event) => {
+        const newText = event.target.value;
 
-const [markedText, setMarkedText] = useState('');
+        marked.use({
+            breaks: true
+        });
 
+        setText(newText);
+        setMarkedText(marked.parse(newText));
+    };
+
+    const [markedText, setMarkedText] = useState('');
+    
     return (
         <>
-            <Editor onChange={handleChange}/>
-            <Previewer text={markedText}/>
+            <Editor onChange={handleChange} />
+            <Previewer text={markedText} />
         </>
     )
 }
