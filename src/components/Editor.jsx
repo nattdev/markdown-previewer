@@ -1,7 +1,6 @@
 import '../styles/editor.css'
 
-function Editor({ onChange }) {
-
+function Editor({ onChange, text}) {
     return (
         <div className="window glass active editor">
             <div className="title-bar">
@@ -12,7 +11,7 @@ function Editor({ onChange }) {
                 </div>
             </div>
             <div className="window-body has-space">
-                <textarea id="editor" onChange={onChange} ></textarea>
+                <textarea id="editor" onChange={onChange} value={text}></textarea>
             </div>
         </div>
     )
