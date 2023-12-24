@@ -1,0 +1,14 @@
+.previewer {
+    max-height: calc(50% - 1em);
+    max-width: 80%;
+    min-width: 50%;
+    min-height: 200px;
+    margin-top: 1em;
+    box-sizing: border-box;
+}
+
+#preview {
+    max-width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
