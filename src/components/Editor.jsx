@@ -1,7 +1,9 @@
-function Editor({onChange}) {
+import '../styles/editor.css'
+
+function Editor({ onChange }) {
 
     return (
-        <div className="window glass active">
+        <div className="window glass active editor">
             <div className="title-bar">
                 <div className="title-bar-text">Editor</div>
                 <div className="title-bar-controls">
@@ -9,7 +11,9 @@ function Editor({onChange}) {
                     <button aria-label="Close"></button>
                 </div>
             </div>
-            <textarea onChange={onChange} id="editor"></textarea>
+            <div className="window-body has-space">
+                <textarea id="editor" onChange={onChange} ></textarea>
+            </div>
         </div>
     )
 }
