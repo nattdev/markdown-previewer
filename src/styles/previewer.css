@@ -12,3 +12,7 @@
     height: calc(100% - 50px);
     overflow-y: scroll;
 }
+
+.previewer h1 {
+    font-size: 4rem;
+}
