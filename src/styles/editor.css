@@ -1,12 +1,13 @@
 .editor {
     max-height: 50%;
     max-width: 80%;
-    min-height: 130px;
+    min-height: 150px;
+    min-width: 70%;
 }
 
 .editor textarea {
-    min-height: 130px;
-    min-width: 200px;
+    min-height: 200px;
+    min-width: 100%;
     max-width: 100%;
     max-height: calc(50vh - 80px);
 }
