@@ -14,5 +14,16 @@
 }
 
 .previewer h1 {
-    font-size: 4rem;
+    font-size: 2.8rem;
+}
+
+.previewer img {
+    width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+    .previewer {
+        max-width: 100%;
+        margin-inline: 2rem;
+    }
 }
